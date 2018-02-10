@@ -11,6 +11,7 @@ Pull the Git repository via download, or by cloning to your computer. Run
     bundle install
 
 To get all of the gems sorted. You might have issues with the FFI gem. On a Mac I resolved these with Homebrew, which was used to install Rails. Use
+
     brew install libffi
     brew install automake
 
