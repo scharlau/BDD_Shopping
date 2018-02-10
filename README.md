@@ -1,8 +1,8 @@
-# README for the Shopping Exercise #
+# README for the BDD Shopping Exercise #
 
-This is a 'deliberate practice' exercise for working with Rails. As before, the goal here is to have an example that lets us better understand one part of a Rails application, and not to have a perfect example. To that end this shopping example is purely for exploring relationships.
+This is a 'deliberate practice' exercise for working with Rails. As before, the goal here is to have an example that lets us better understand one part of a Rails application, and not to have a perfect example. To that end this shopping example is purely for exploring behaviour driven devlopment (BDD).
 
-This example is a simplified and modified version of the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the relationships that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
+This example is a simplified and modified version of the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
 
 ## Setting Up the Exercises ##
 
@@ -10,7 +10,17 @@ Pull the Git repository via download, or by cloning to your computer. Run
 
     bundle install
 
-To get all of the gems sorted. Now run the migrations with either rails or rake command depending upon your platform.
+To get all of the gems sorted. You might have issues with the FFI gem. On a Mac I resolved these with Homebrew, which was used to install Rails. Use
+    brew install libffi
+    brew install automake
+
+Now you should be able to run
+
+    gem install ffi
+
+Then bundle install should complete.
+
+Now run the migrations with either rails or rake command depending upon your platform.
 
     rails db:migrate
 
