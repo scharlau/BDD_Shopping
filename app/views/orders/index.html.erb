@@ -22,6 +22,36 @@
   </tbody>
 </table>
 
+<h1>Dashboard</h1>
+<p>Orders ranked by highest value</p>
+<p>This shows what you can retrieve in the view. A better solution would be to
+  do this in the controller and to then send the values back to the view for display. </p>
+<p> Order Pairs: (customer_id, value) <%= @order_pairs %>
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Value</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.customer.name %></td>
+        <td>
+
+          <% order.line_items.each do |line_item | %>
+           <%= line_item.quantity * line_item.product.price %>
+          <% end %>
+        </td>
+        <td><%= link_to 'Show', order %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <br>
 
 <%= link_to 'New Order', new_order_path %>
