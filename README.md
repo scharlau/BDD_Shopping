@@ -42,7 +42,16 @@ When you start at localhost:3000 you're taken to orders/index which has a dashbo
 
 Work through the three rounds with a partner, or on your own, depending upon your circumstances. Each round should be twelve minutes, followed by a discussion of where you are and what has been working, as well as, what you're working on next.
 
-You may want to refer to the shopping/db/schema.rb file to better understand the database schema before you get started. Some of you might even want to diagram the schema.
+While you're doing this example you might find it useful to look at these websites for more details of how to manipulate page elements:
+Cucumber Wiki https://github.com/cucumber/cucumber/wiki/
+Capybara examples https://github.com/jnicklas/capybara
+Capybara 'cheat sheet' http://rubydoc.info/github/jnicklas/capybara/master
+
+There is a simple example of how to create a customer under spec/integration/create_customer_spec.rb. By convention all RSpec files end with \_spec.rb to signify that they are test files. You can run this from the console with the command
+
+    rspec
+
+Which will launch the test system using the test database and should come back green because it works at creating a customer.
 
 1. Round one should be fixing the line_item and order pages to show names of items and customers.
 2. Round two should be creating a 'dashboard' page to show total orders ranked by customers.
