@@ -53,6 +53,6 @@ There is a simple example of how to create a customer under spec/integration/cre
 
 Which will launch the test system using the test database and should come back green because it works at creating a customer.
 
-1. Round one should be fixing the line_item and order pages to show names of items and customers.
-2. Round two should be creating a 'dashboard' page to show total orders ranked by customers.
-3. Round three is making round two work when you scale up the database by changing the numbers in the seed_tables files to work with 50 customers and orders of 10 items per customer, or by setting it up so that you also have customers, who have no orders.
+1. Round one should be adding tests for the other models too. Each of them should go into a file similar to the one for the customer.
+2. Round two should be creating a test for the 'dashboard' page to check something there.
+3. Round three is adding more tests to test the integration of the models. In order to do this you'll need to create a single file that combines a number of models. 
