@@ -13,7 +13,7 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.customer %></td>
+        <td><%= order.customer.name %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -37,18 +37,22 @@
   </thead>
 
   <tbody>
-    <% @orders.each do |order| %>
+    <% @order_pairs.each do |i| %>
       <tr>
-        <td><%= order.customer.name %></td>
+        <%
+        customer_id = i[0]
+        @customer = Customer.find(customer_id)
+        %>
+        <td><%= @customer.name %></td>
         <td>
 
-          <% order.line_items.each do |line_item | %>
-           <%= line_item.quantity * line_item.product.price %>
-          <% end %>
+           <%= i[1] %>
+
         </td>
-        <td><%= link_to 'Show', order %></td>
+        <td> add order breakdown </td>
 
       </tr>
+
     <% end %>
   </tbody>
 </table>

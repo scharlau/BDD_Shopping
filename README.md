@@ -2,7 +2,7 @@
 
 This is a 'deliberate practice' exercise for working with Rails. As before, the goal here is to have an example that lets us better understand one part of a Rails application, and not to have a perfect example. To that end this shopping example is purely for exploring behaviour driven devlopment (BDD).
 
-This example is a simplified and modified version of the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
+This example is a simplified and modified version of a messy solution to Shopping Example at https://github.com/scharlau/Shopping_Exercise which is built upon from the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
 
 ## Setting Up the Exercises ##
 
@@ -36,7 +36,7 @@ After you start the rails server you can now see the following items in the appl
 * localhost:3000/line_items
 * localhost:3000/orders
 
-In their current state the line_items and orders pages are not very helpful, because they show Class objects where you'd expect to see a customer name, product name, or cart_id, although actually you don't need to ever see the cart_id, because it's only used as a staging area for the shopping cart.
+When you start at localhost:3000 you're taken to orders/index which has a dashboard showing total orders by customers. (This still needs some rework, but that's for later. For now we just want a BDD example to use.)
 
 ## Do the Work ##
 
