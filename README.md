@@ -2,7 +2,11 @@
 
 This is a 'deliberate practice' exercise for working with Rails. As before, the goal here is to have an example that lets us better understand one part of a Rails application, and not to have a perfect example. To that end this shopping example is purely for exploring behaviour driven devlopment (BDD).
 
-This example is a simplified and modified version of a messy solution to Shopping Example at https://github.com/scharlau/Shopping_Exercise which is built upon from the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
+This shopping example is a simplified and modified version of a messy solution to Shopping Example at https://github.com/scharlau/Shopping_Exercise which is built upon from the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
+
+The BDD example with RSpec and Capybara is based on examples found at https://robots.thoughtbot.com/rspec-integration-tests-with-capybara and some help from Stackoverflow to modify the rails_helper.rb file to find the session_helpers.rb file.
+
+Find more on Capybara and RSPec configuration at https://www.devmynd.com/blog/setting-up-rspec-and-capybara-in-rails-5-for-testing/
 
 ## Setting Up the Exercises ##
 
@@ -47,12 +51,15 @@ Cucumber Wiki https://github.com/cucumber/cucumber/wiki/
 Capybara examples https://github.com/jnicklas/capybara
 Capybara 'cheat sheet' http://rubydoc.info/github/jnicklas/capybara/master
 
-There is a simple example of how to create a customer under spec/integration/create_customer_spec.rb. By convention all RSpec files end with \_spec.rb to signify that they are test files. You can run this from the console with the command
+There is a simple example of how to create a customer under spec/features/create_customer_spec.rb. By convention all RSpec files end with \_spec.rb to signify that they are test files. You can run this from the console with the command
 
     rspec
 
 Which will launch the test system using the test database and should come back green because it works at creating a customer.
 
-1. Round one should be adding tests for the other models too. Each of them should go into a file similar to the one for the customer.
+## Tests are independent ##
+Tests are run independent of each other, so there is no continuity when testing. If you want to build up content to test larger examples, then you need to create it within each scenario.
+
+1. Round one should be adding tests for the other models too. Each of them should go into files similar to the create_customer_spec.rb file and have methods added to the session_helpers.rb file.
 2. Round two should be creating a test for the 'dashboard' page to check something there.
-3. Round three is adding more tests to test the integration of the models. In order to do this you'll need to create a single file that combines a number of models. 
+3. Round three is adding more tests to test the integration of the models, or something else.
