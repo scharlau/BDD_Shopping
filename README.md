@@ -42,6 +42,9 @@ After you start the rails server you can now see the following items in the appl
 
 When you start at localhost:3000 you're taken to orders/index which has a dashboard showing total orders by customers. (This still needs some rework, but that's for later. For now we just want a BDD example to use.)
 
+## Tests are independent ##
+Tests are run independent of each other, so there is no continuity when testing. If you want to build up content to test larger examples, then you need to create it within each scenario.
+
 ## Do the Work ##
 
 Work through the three rounds with a partner, or on your own, depending upon your circumstances. Each round should be twelve minutes, followed by a discussion of where you are and what has been working, as well as, what you're working on next.
@@ -57,8 +60,6 @@ There is a simple example of how to create a customer under spec/features/create
 
 Which will launch the test system using the test database and should come back green because it works at creating a customer.
 
-## Tests are independent ##
-Tests are run independent of each other, so there is no continuity when testing. If you want to build up content to test larger examples, then you need to create it within each scenario.
 
 1. Round one should be adding tests for the other models too. Each of them should go into files similar to the create_customer_spec.rb file and have methods added to the session_helpers.rb file.
 2. Round two should be creating a test for the 'dashboard' page to check something there.
