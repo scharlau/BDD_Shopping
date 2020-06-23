@@ -2,7 +2,7 @@
 
 This is a 'deliberate practice' exercise for working with Rails. As before, the goal here is to have an example that lets us better understand one part of a Rails application, and not to have a perfect example. To that end this shopping example is purely for exploring behaviour driven devlopment (BDD).
 
-This shopping example is a simplified and modified version of a messy solution to Shopping Example at https://github.com/scharlau/Shopping_Exercise which is built upon from the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
+This shopping example is a simplified and modified version of a messy solution to the Shopping Example at https://github.com/scharlau/Shopping_Exercise which is built upon from the 'Depot' example found in "Agile Web Development with Rails" from Pragmatic Programmers (https://pragprog.com/book/rails5/agile-web-development-with-rails-5) We're using this example, because it lets us quickly get to the BDD parts that we want to explore. This example also uses the Faker Gem from https://github.com/stympy/faker to generate sample data for the application.
 
 In this example the shopping cart doesn't work. That's something that I'll fix in a future update. For now it means you should not create cart objects as they will not show up on the page.
 
@@ -15,6 +15,8 @@ Find more on Capybara and RSPec configuration at https://www.devmynd.com/blog/se
 Pull the Git repository via download, or by cloning to your computer. Run
 
     bundle install
+    rails webpacker:install
+    yarn install --missing files
 
 To get all of the gems sorted. You might have issues with the FFI gem. On a Mac I resolved these with Homebrew, which was used to install Rails. Use
 
